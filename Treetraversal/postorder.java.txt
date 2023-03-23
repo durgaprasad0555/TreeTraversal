@@ -1,0 +1,16 @@
+class Tree
+{
+    ArrayList<Integer>al=new ArrayList<>();
+    //Function to return a list containing the postorder traversal of the tree.
+    ArrayList<Integer> postOrder(Node root)
+    {
+        if(root!=null)
+        {
+            postOrder(root.left);
+            postOrder(root.right);
+            al.add(root.data);
+        }
+        return al;
+       // Your code goes here
+    }
+}

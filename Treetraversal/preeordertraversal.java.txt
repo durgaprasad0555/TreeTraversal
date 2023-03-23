@@ -1,0 +1,23 @@
+class BinaryTree
+{
+public static void solve(Node root,ArrayList<Integer>al)
+{
+    if(root==null)
+    {
+        return;
+    }
+    if(root!=null)
+    {
+       al.add(root.data);
+       solve(root.left,al);
+        solve(root.right,al);
+    }
+}
+    static ArrayList<Integer> preorder(Node root)
+    {
+      ArrayList<Integer>al=new ArrayList<>();
+    solve(root,al);
+    return al;
+    }
+
+}
